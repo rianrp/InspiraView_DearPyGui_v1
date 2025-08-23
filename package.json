@@ -1,0 +1,14 @@
+{
+  "name": "inspiraview-tauri",
+  "version": "1.0.0",
+  "description": "Modern image overlay tool built with Tauri",
+  "main": "src/index.html",
+  "scripts": {
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.0.0"
+  }
+}

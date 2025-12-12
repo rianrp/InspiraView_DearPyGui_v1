@@ -20,7 +20,7 @@ Uma versão moderna do InspiraView construída com **Tauri**, oferecendo uma int
 2. **Node.js** (opcional, apenas para desenvolvimento)
 
 ### Instalação
-
+ 
 1. Abra o terminal no diretório do projeto
 2. Execute o comando para desenvolvimento:
 

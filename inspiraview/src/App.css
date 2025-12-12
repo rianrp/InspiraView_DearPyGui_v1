@@ -259,3 +259,81 @@ label {
 .btn, .slider {
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Estilos para feedback visual de drag & drop */
+.image-container.drag-over {
+  background: linear-gradient(135deg, rgba(74, 144, 226, 0.1), rgba(80, 200, 120, 0.1));
+  border: 2px dashed var(--primary-color);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+.image-container.drag-over .image-placeholder {
+  background: rgba(74, 144, 226, 0.05);
+  border: 2px dashed var(--primary-color);
+  color: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.image-container.drag-over .image-placeholder p {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.image-container.drag-over .image-placeholder svg {
+  stroke: var(--primary-color);
+  filter: drop-shadow(0 2px 4px rgba(74, 144, 226, 0.3));
+}
+
+/* Estilos para dicas de uso */
+.tips {
+  margin-top: 15px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.tips small {
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.tips strong {
+  color: var(--text-color);
+}
+
+/* Melhoria do botão de colar */
+.btn-secondary {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-color);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.08));
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+/* Estilos do placeholder melhorados */
+.image-placeholder {
+  transition: all 0.3s ease;
+}
+
+.image-placeholder p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.image-placeholder .shortcuts {
+  margin-top: 20px;
+  opacity: 0.7;
+}

@@ -1,144 +1,83 @@
-# InspiraView - Tauri Edition
+# 🖼️ InspiraView
 
-Uma versão moderna do InspiraView construída com **Tauri**, oferecendo uma interface mais bonita e moderna para visualização de imagens com overlay.
+**O Moodboard Infinito para Criativos.**
+Organize referências, ideias e notas em um espaço livre de distrações.
 
-## ✨ Funcionalidades
-
-- 🖼️ **Carregamento de imagens** em vários formatos (PNG, JPG, JPEG, WEBP, GIF, BMP, TIFF)
-- 🔍 **Controle de zoom** de 10% a 500%
-- 👁️ **Controle de opacidade** da janela (30% a 100%)
-- 📌 **Sempre no topo** para uso como referência
-- ⌨️ **Atalhos de teclado** para produtividade
-- 🎨 **Interface moderna** com tema escuro
-- 📱 **Responsiva** e intuitiva
-
-## 🚀 Como executar
-
-### Pré-requisitos
-
-1. **Rust** - [Instalar Rust](https://rustup.rs/)
-2. **Node.js** (opcional, apenas para desenvolvimento)
-
-### Instalação
- 
-1. Abra o terminal no diretório do projeto
-2. Execute o comando para desenvolvimento:
-
-```powershell
-# Se você tem Node.js
-npm install
-npm run tauri:dev
-
-# Ou diretamente com Cargo
-cd src-tauri
-cargo tauri dev
-```
-
-### Build para produção
-
-```powershell
-# Com npm
-npm run tauri:build
-
-# Ou diretamente
-cd src-tauri
-cargo tauri build
-```
-
-## 🎮 Como usar
-
-### Interface
-- **Carregar Imagem**: Clique no botão ou use `Ctrl+O`
-- **Zoom**: Use o slider ou teclas `+`/`-`
-- **Reset Zoom**: Clique em "Reset" ou pressione `R`
-- **Opacidade**: Ajuste com o slider
-- **Fechar**: Pressione `Esc`
-
-### Atalhos de teclado
-- `Ctrl + O` - Abrir imagem
-- `+` ou `=` - Aumentar zoom
-- `-` - Diminuir zoom
-- `R` - Resetar zoom (100%)
-- `Esc` - Fechar aplicação
-
-## 🛠️ Estrutura do projeto
-
-```
-InspiraView_DearPyGui_v1/
-├── src/                    # Frontend (HTML, CSS, JS)
-│   ├── index.html         # Interface principal
-│   ├── styles.css         # Estilos modernos
-│   └── script.js          # Lógica JavaScript
-├── src-tauri/             # Backend Rust
-│   ├── src/
-│   │   └── main.rs        # Código Rust/Tauri
-│   ├── Cargo.toml         # Dependências Rust
-│   ├── tauri.conf.json    # Configurações Tauri
-│   └── icons/             # Ícones da aplicação
-├── package.json           # Dependências Node.js
-└── README.md             # Esta documentação
-```
-
-## 🎨 Principais melhorias da versão Tauri
-
-### Visual
-- ✅ Interface moderna com gradientes e animações
-- ✅ Tema escuro profissional
-- ✅ Controles intuitivos e responsivos
-- ✅ Feedback visual aprimorado
-- ✅ Scrollbars customizadas
-
-### Funcionalidade
-- ✅ Suporte a mais formatos de imagem
-- ✅ Zoom mais suave e preciso
-- ✅ Atalhos de teclado intuitivos
-- ✅ Notificações de erro elegantes
-- ✅ Melhor gestão de recursos
-
-### Performance
-- ✅ Menor uso de memória
-- ✅ Inicialização mais rápida
-- ✅ Interface mais responsiva
-- ✅ Bundle menor para distribuição
-
-## 🐛 Solução de problemas
-
-### Erro de compilação Rust
-```bash
-rustup update
-cargo clean
-cargo build
-```
-
-### Erro de dependências
-```bash
-npm install
-cd src-tauri
-cargo update
-```
-
-### Tauri não reconhecido
-```bash
-npm install -g @tauri-apps/cli
-# ou
-cargo install tauri-cli
-```
-
-## 📦 Distribuição
-
-Após o build, o executável estará em:
-- Windows: `src-tauri/target/release/bundle/msi/`
-- Linux: `src-tauri/target/release/bundle/appimage/`
-- macOS: `src-tauri/target/release/bundle/dmg/`
-
-## 🤝 Contribuições
-
-Sinta-se à vontade para contribuir com melhorias, reportar bugs ou sugerir novas funcionalidades!
-
-## 📄 Licença
-
-Este projeto é de código aberto. Use como preferir!
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Windows](https://img.shields.io/badge/Windows-10%2F11-blue.svg)
+![Tauri](https://img.shields.io/badge/Powered_by-Tauri-orange.svg)
 
 ---
 
-**Desenvolvido com ❤️ usando Tauri, HTML, CSS, JavaScript e Rust**
+## 🚀 O que é o InspiraView?
+
+O **InspiraView** é uma ferramenta de produtividade visual feita para designers, artistas e desenvolvedores. Diferente de visualizadores de imagem comuns, ele oferece um **Canvas Infinito** onde você pode arrastar e organizar múltiplas imagens, adicionar notas de texto e criar painéis de inspiração (moodboards) completos.
+
+Sua interface minimalista e modo "Sempre no Topo" permitem que ele funcione como o companheiro perfeito sobrepondo outros softwares (como Blender, Photoshop ou VS Code).
+
+## ✨ Principais Funcionalidades
+
+### ♾️ Canvas Infinito
+- Espaço livre em 2D para organizar suas ideias.
+- **Pan & Zoom** fluidos com o mouse.
+- Navegação intuitiva sem limites de borda.
+
+### 🖼️ Imagens & Referências
+- **Drag & Drop**: Arraste imagens de pastas ou navegadores direto para o canvas.
+- **Transform**: Mova, rotacione e redimensione cada imagem individualmente.
+- **Filtros**: Toggle rápido para Grayscale (Preto e Branco) para analisar valores tonais.
+- **Guias**: Overlay de Regra dos Terços para estudo de composição.
+- **Flip**: Espelhe imagens horizontalmente ou verticalmente.
+
+### 📝 Notas & Texto
+- **Sticky Notes**: Dê um duplo clique em qualquer lugar para adicionar texto.
+- **Formatação**: Altere o tamanho da fonte e a cor para categorizar ideias.
+- **Edição Fácil**: Selecione para mover, duplo clique para editar.
+
+### 🛠️ Ferramentas de Produtividade
+- **Sempre no Topo (Pin)**: Mantenha suas referências visíveis enquanto trabalha em outro software.
+- **Seleção em Massa**: Segure `CTRL + Drag` para selecionar e mover múltiplos itens.
+- **Color Picker**: Copie códigos HEX de cores direto das suas imagens.
+- **Opacidade Global**: Deixe o canvas semitransparente para ver o que está atrás.
+
+### 💾 Salvar & Carregar
+- **Sessões Locais**: Salve seus moodboards em arquivos `.json` para continuar depois.
+- **Auto-Save**: O estado atual é lembrado automaticamente ao reabrir o app.
+
+## 🎯 Para quem é?
+
+- **Designers UI/UX**: Monte painéis de referências visuais e fluxos.
+- **Artistas 3D/2D**: Mantenha concepts e blueprints sempre à vista enquanto modela ou desenha.
+- **Desenvolvedores**: Compare layouts de design com o código em tempo real.
+- **Estudantes**: Organize diagramas e anotações de estudo.
+
+## 📥 Como Usar
+
+### Instalação (Windows)
+1. Baixe o instalador `.msi` ou executável `.exe`.
+2. Instale e execute.
+3. Pronto! O app roda localmente, sem necessidade de internet.
+
+### Atalhos Rápidos
+| Ação | Atalho |
+|--------|--------|
+| **Zoom** | Roda do Mouse |
+| **Pan (Mover Canvas)** | Clique e Arraste (Fundo) |
+| **Mover Item** | Clique e Arraste (Item) |
+| **Adicionar Texto** | Duplo Clique (Fundo) |
+| **Seleção Múltipla** | `Ctrl + Drag` |
+| **Resetar Câmera** | `R` |
+| **Deletar Item** | `Delete` |
+| **Fixar no Topo** | `Pin Button` (📌) |
+
+## 🛠️ Tecnologias
+
+Construído com tecnologias modernas para garantir **performance** e **baixo consumo de memória**:
+- **Tauri v2** (Rust Core)
+- **React 18** + TypeScript
+- **Vite**
+- **IndexedDB** para persistência de dados.
+
+---
+
+**InspiraView** - Transforme sua tela em um espaço de inspiração.

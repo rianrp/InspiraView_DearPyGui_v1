@@ -387,7 +387,6 @@ function App() {
     if (itemNode) {
       const id = itemNode.getAttribute('data-id');
       if (id) {
-        const item = items.find(i => i.id === id);
         // Handle text editing blur
         if (editingId && editingId !== id) {
           setEditingId(null);
